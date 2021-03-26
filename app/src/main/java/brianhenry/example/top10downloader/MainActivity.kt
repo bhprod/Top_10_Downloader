@@ -3,6 +3,7 @@ package brianhenry.example.top10downloader
 import android.os.AsyncTask
 import android.os.Bundle
 import android.util.Log
+import android.widget.ArrayAdapter
 import androidx.appcompat.app.AppCompatActivity
 import java.net.URL
 class FeedEntry {
@@ -48,6 +49,8 @@ class MainActivity : AppCompatActivity() {
                 //Log.d(TAG, "onPostExecute: parameter is $result")
                 val parseApplications = ParseApplications()
                 parseApplications.parse(result)
+
+                //val arrayAdapter = ArrayAdapter<FeedEntry>() //TODO
             }
 
             override fun doInBackground(vararg url: String?): String {
